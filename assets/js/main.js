@@ -1,6 +1,7 @@
 let cursorPosition = { x: 0, y: 0 };
 let isCursorMoving = false;
 let cursorMoveTimeout;
+
 let circles = [];
 let circleRemovalInterval;
 
@@ -38,6 +39,7 @@ setInterval(() => {
     if (isCursorMoving) {
         const circle = document.createElement("div");
         circle.classList.add("circle");
+
         document.body.appendChild(circle);
 
         circle.style.left = cursorPosition.x - circle.offsetWidth / 2 + "px";
