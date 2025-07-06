@@ -1,4 +1,3 @@
-
 let cursorPosition = { x: 0, y: 0 };
 let isCursorMoving = false;
 let cursorMoveTimeout;
@@ -11,8 +10,8 @@ document.addEventListener("mousemove", (e) => {
     cursorPosition.x = e.clientX;
     cursorPosition.y = e.clientY;
 
-    cursor.style.left = e.clientX - cursor.offsetWidth / 2 + 'px';
-    cursor.style.top = e.clientY - cursor.offsetHeight / 2 + 'px';
+    cursor.style.left = e.clientX - cursor.offsetWidth / 2 + "px";
+    cursor.style.top = e.clientY - cursor.offsetHeight / 2 + "px";
 
     isCursorMoving = true;
     clearTimeout(cursorMoveTimeout);
@@ -31,7 +30,7 @@ document.addEventListener("mousemove", (e) => {
                     clearInterval(circleRemovalInterval);
                 }
             }, 25);
-        }, 1000);
+        }, 500);
     }, 100);
 });
 
@@ -41,31 +40,9 @@ setInterval(() => {
         circle.classList.add("circle");
         document.body.appendChild(circle);
 
-        circle.style.left = cursorPosition.x - circle.offsetWidth / 2 + 'px';
-        circle.style.top = cursorPosition.y - circle.offsetHeight / 2 + 'px';
+        circle.style.left = cursorPosition.x - circle.offsetWidth / 2 + "px";
+        circle.style.top = cursorPosition.y - circle.offsetHeight / 2 + "px";
 
         circles.push(circle);
     }
 }, 10);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
